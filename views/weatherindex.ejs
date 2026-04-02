@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/weather.css">
+    <title>Weather website</title>
+    
+</head>
+<body>
+<div class="card">
+  <div class="search">
+    <form action="/result" method="POST">
+    <input type="text" id="city" name="city"placeholder="Enter city name" required>
+    <button><img src="../images/search.svg" alt=""></button>
+    </form>
+  </div>
+  <div class="weather">
+    <div class="imgtext"><img src="../images/770b805d5c99c7931366c2e84e88f251.jpg"  class="icon">
+    <h2 class="city"> <%=Cityname%></h2></div>
+    <h1 class="temp"><%=tempindegree%> °C</h1>
+  </div>
+  <br>
+<div class="details">
+    <div class="col1>"
+    <div id="humidity"class="humidity">Humidity: <%=humidpercent%>%</div>
+    </div>
+    <br>
+    <div class="col2">
+    <div id= "windspeed" class="windspeed">Wind Speed: <%=windspeed%> Km/h</div>
+    </div>
+</div>
+</div>
+</body>
+</html>
