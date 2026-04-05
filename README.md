@@ -4,8 +4,6 @@
 
 A beautiful, fully-responsive weather application that provides real-time current weather data, expanded environmental metrics, and a dynamic 5-day forecast. Designed with a modern, frosted glassmorphism aesthetic and powered by the OpenWeatherMap API.
 
-![Weather Dashboard Preview](public/background.jpg)
-
 ## ✨ Features
 
 - **Real-Time Data:** Get up-to-the-minute weather conditions for any city worldwide.
