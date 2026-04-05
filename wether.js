@@ -1,15 +1,21 @@
 import express from "express";
-import axios from "axios"
+import axios from "axios";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const app= express();
-const port=3000;
+const app = express();
+const port = 3000;
 dotenv.config();
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine","ejs");
 
 
@@ -68,3 +74,6 @@ app.post("/result", async (req,res)=>{
 app.listen(port,()=>{
     console.log(`Server is running at http://localhost:${port}`);
 });
+
+// Export the app for Vercel serverless functions
+export default app;
